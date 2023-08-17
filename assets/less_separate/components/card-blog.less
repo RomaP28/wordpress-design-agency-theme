@@ -1,0 +1,86 @@
+@import (reference) "../base/variables";
+@import (reference) "../base/fonts";
+
+@import (reference) "../base/animations";
+@import (reference) "../base/base";
+@import (reference) "../base/typography";
+
+.blog-card{
+  width: 40rem;
+  height: 32rem;
+  color: @color-white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media (min-width: 821px) {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  .date{
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: 0.05em;
+  }
+
+  h2{
+    margin-top: 4.4rem;
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 4.5rem;
+    letter-spacing: 0.05em;
+
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  h2, p{
+    text-align: left;
+  }
+  .category{
+    margin-top: auto;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.07em;
+  }
+  a{
+    color: @color-white;
+    margin-top: 4.4rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .blog-card{
+    width: 70%;
+    height: 17rem;
+    transform: translateY(0);
+    opacity: 1;
+
+    .date{
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      letter-spacing: 0.03em;
+    }
+
+    h2{
+      margin-top: 1rem;
+      font-size: 1.6rem;
+      line-height: 2.5rem;
+      letter-spacing: 0.03em;
+    }
+    .category{
+      font-weight: 400;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+      letter-spacing: 0.03em;
+    }
+    a{
+      margin-top: 1rem;
+    }
+  }
+}

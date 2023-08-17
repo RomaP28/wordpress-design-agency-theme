@@ -1,0 +1,105 @@
+@import (reference) "../base/variables";
+@import (reference) "../base/fonts";
+
+@import (reference) "../base/animations";
+@import (reference) "../base/base";
+@import (reference) "../base/typography";
+
+.error-section{
+  //height: 50vh;
+  width: 100%;
+  padding: 12rem 1.5rem 7.5rem;
+  background-color: @color-bg-tertiary-grey;
+  position: relative;
+
+  .container{
+    margin: 0 auto;
+    max-width: 58rem;
+  }
+
+  h2 {
+    transform: translateY(0);
+    opacity: 1;
+    span {
+      font-weight: 600;
+      font-size: 2.4rem;
+      line-height: 3rem;
+      letter-spacing: 0.07em;
+      color: @color-black;
+    }
+  }
+  svg{
+    width:69.2rem;
+    height:36.5rem
+  }
+  p{
+    text-align: center;
+    font-weight: 700;
+    font-size: 20rem;
+    line-height: 25rem;
+    letter-spacing: 0.07em;
+    color:  @color-bg-tertiary-grey;
+    background-image: @color-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 6px transparent;
+  }
+
+  .scroll-trajectory{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+.star{
+  position: absolute;
+  width: 2.1rem;
+  height: 2.1rem;
+  background: @color-white;
+  filter: blur(10.5px);
+
+  &:nth-of-type(1){
+    top: 21rem;
+    left: 22%;
+    animation: scaling-star linear 4s infinite;
+    @media(max-width: 700px) {
+      display: none;
+    }
+  }
+  &:nth-of-type(2){
+    top: 14.6rem;
+    right: 16%;
+    animation: scaling-star linear 4s 1s infinite;
+    @media(max-width: 700px) {
+      top: 18rem;
+      right: 1.3rem;
+    }
+  }
+  &:nth-of-type(3){
+    right: 30%;
+    bottom: 13.3rem;
+    animation: scaling-star linear 4s 2s infinite;
+    @media(max-width: 700px) {
+      display: none;
+    }
+  }
+}
+
+
+@media(max-width: 700px) {
+  .error-section{
+    .container{
+      margin: 0 auto;
+      max-width: 28rem;
+    }
+    svg{
+      width:37.2rem;
+    }
+
+    p{
+      font-size: 13rem;
+      line-height: 20rem;
+    }
+  }
+}

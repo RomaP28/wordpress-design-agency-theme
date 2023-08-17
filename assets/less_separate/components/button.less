@@ -1,0 +1,147 @@
+@import (reference) "../base/variables";
+@import (reference) "../base/fonts";
+
+@import (reference) "../base/animations";
+@import (reference) "../base/base";
+@import (reference) "../base/typography";
+
+.btn{
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  height: 5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &,
+  &:link,
+  &:visited {
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5rem;
+    font-size: @default-font-size;
+    font-weight: 400;
+    line-height: 2.2rem;
+    letter-spacing: 0.07em;
+    border: .1rem solid @color-primary-red;
+    white-space: nowrap;
+    transition:  0.15s padding ease-in-out, 0.15s border ease-in-out;
+  }
+
+  .arrow {
+    margin-left: 1.1rem;
+  }
+
+  &.light {
+    background: @color-white;
+    color: @color-primary-red;
+    &:hover{
+      background: @color-tertiary-red;
+      //padding: 1rem 3.5rem;
+      border: .4rem solid;
+    }
+  }
+
+  &.dark {
+    background: @color-primary-red;
+    color: @color-white;
+
+    &:hover{
+      background: @color-secondary-red;
+      //padding: 1rem 3.5rem;
+      border: .4rem solid #FFE0E0;
+    }
+  }
+
+  &.grey{
+    display: none;
+    padding: 0;
+    color: @color-secondary-grey;
+    background: @color-white;
+    border: 1px solid @color-secondary-grey;
+  }
+
+  &.small {
+    width: 20rem;
+  }
+
+  &.big {
+    width: 25rem;
+  }
+}
+
+
+
+@media(max-width: 1200px){
+  .btn{
+    height: 4rem;
+    &,
+    &:link,
+    &:visited {
+      //padding: .9rem 0; //2.3rem
+      font-size: 1.5rem;
+      line-height: 1.9rem;
+    }
+    //&.light,
+    //&.dark {
+    //  &:hover{
+    //    padding: .6rem 2rem;
+    //  }
+    //}
+
+    &.small {
+      width: 15rem;
+    }
+
+    &.big {
+      width: 22rem;
+    }
+  }
+}
+
+@media(max-width: 700px){
+  .btn{
+    height: 3.5rem;
+    &,
+    &:link,
+    &:visited {
+      //padding: .7rem 0; //1.4rem
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+    }
+
+    //&.light,
+    //&.dark {
+    //  &:hover{
+    //    padding: .4rem 1.1rem;
+    //  }
+    //}
+
+    &.grey{
+      display: inline-block;
+      padding: .7rem 0 .7rem 0;
+      span{
+        vertical-align: top;
+      }
+      img{
+        display: inline-block;
+        margin-left: 1rem;
+      }
+      &:active{
+        img {
+          animation: spinAround 1s linear;
+        }
+      }
+    }
+
+    &.small {
+      width: 12.5rem;
+    }
+
+    &.big {
+      width: 18rem;
+    }
+  }
+}

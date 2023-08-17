@@ -1,0 +1,210 @@
+@import (reference) "../base/variables";
+@import (reference) "../base/fonts";
+
+@import (reference) "../base/animations";
+@import (reference) "../base/base";
+@import (reference) "../base/typography";
+
+.top-block {
+  width: 100%;
+  //min-height: 67rem;
+  height: 100vh;
+  max-height: 98rem;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all .5s;
+  .container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 132rem;
+    height: 100%;
+    position: relative;
+  }
+}
+
+.tagline{
+  background: @color-bg-grey;
+  width: 100%;
+  padding: 15rem 0;
+
+  .container{
+    margin: 0 auto;
+    max-width: 115rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 11.8rem;
+  }
+  h2, p{
+    text-align: left;
+  }
+  h2{
+    min-width: 58.1rem;
+  }
+}
+
+.details{
+  background-color: @color-white;
+  //background-image: url('../img/shadow-top.webp'),url('../img/shadow-bottom.webp');
+  background-position: top left, bottom right;
+  background-repeat: no-repeat, no-repeat;
+  width: 100%;
+  padding: 15rem 1.5rem;
+  .container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 132rem;
+  }
+
+  .text-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 41rem;
+  }
+  h2, p{
+    text-align: left;
+    max-width: 45.1rem;
+  }
+  p{
+    margin-top: 3rem;
+    line-height: 140%;
+  }
+}
+
+.details-review {
+  width: 100%;
+  padding: 15rem 1.5rem;
+  .container {
+    margin: 0 auto;
+    max-width: 115rem;
+    text-align: center;
+    p{
+      line-height: 140%;
+      font-weight: 300;
+    }
+    img{
+      margin-top: 5rem;
+      max-width: 87.8rem;
+    }
+  }
+  //h2{
+  //  text-align: center;
+  //  margin-bottom: 3rem;
+  //}
+  //
+  //p, h3{
+  //  text-align: left;
+  //}
+  //
+  //ul, h3{
+  //  margin: 3rem 0 3rem 3rem;
+  //}
+  //li{
+  //  text-align: left;
+  //  list-style: disc;
+  //}
+  //.marked{
+  //  background-color: yellow;
+  //}
+}
+
+
+@media (max-width: 1200px) {
+  .top-block {
+    max-height: unset;
+    height: auto;
+    .container{
+      max-width: 76.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-flow: column-reverse;
+      margin-top: 15.5rem;
+    }
+  }
+
+  .tagline{
+    background: url('../../img/macshadow-mobile.webp') no-repeat center center/cover, #F8F7F7;
+    mix-blend-mode: multiply;
+    width: 100%;
+    padding: 15rem 1.5rem;
+    .container{
+      margin: 0 auto;
+      max-width: 58rem;
+      display: block;
+      column-gap: unset;
+    }
+    h2, p{
+      text-align: center;
+    }
+    h2 {
+      min-width: unset;
+    }
+    p{
+      margin-top: 5rem;
+    }
+  }
+
+  .details{
+    .container{
+      flex-flow: column-reverse;
+      align-items: center;
+    }
+    h2, p{
+      text-align: center;
+      max-width: unset;
+    }
+    .text-area{
+      max-width: unset;
+    }
+  }
+
+  .details-review {
+    .container {
+      p{
+        margin: 0 auto;
+        max-width: 68.2rem;
+      }
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .top-block {
+    .container{
+      align-items: center;
+      height: fit-content;
+      margin-top: 13.9rem;
+    }
+  }
+
+  .tagline,
+  .details,
+  .details-review {
+    padding: 8rem 1.5rem;
+  }
+
+
+}
+
+@media (max-width: 600px) {
+  .details-review {
+    .container {
+      overflow: hidden;
+
+      img {
+        margin-top: 3rem;
+        margin-left: 3rem;
+        width: auto;
+        height: 32.5rem
+        //clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+      }
+    }
+  }
+}

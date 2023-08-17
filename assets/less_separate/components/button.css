@@ -1,0 +1,105 @@
+.btn {
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  height: 5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn,
+.btn:link,
+.btn:visited {
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  letter-spacing: 0.07em;
+  border: 0.1rem solid #F34B4B;
+  white-space: nowrap;
+  transition: 0.15s padding ease-in-out, 0.15s border ease-in-out;
+}
+.btn .arrow {
+  margin-left: 1.1rem;
+}
+.btn.light {
+  background: #ffffff;
+  color: #F34B4B;
+}
+.btn.light:hover {
+  background: #FFF0F0;
+  border: 0.4rem solid;
+}
+.btn.dark {
+  background: #F34B4B;
+  color: #ffffff;
+}
+.btn.dark:hover {
+  background: #B42A2A;
+  border: 0.4rem solid #FFE0E0;
+}
+.btn.grey {
+  display: none;
+  padding: 0;
+  color: #6B6B6B;
+  background: #ffffff;
+  border: 1px solid #6B6B6B;
+}
+.btn.small {
+  width: 20rem;
+}
+.btn.big {
+  width: 25rem;
+}
+@media (max-width: 1200px) {
+  .btn {
+    height: 4rem;
+  }
+  .btn,
+  .btn:link,
+  .btn:visited {
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+  }
+  .btn.small {
+    width: 15rem;
+  }
+  .btn.big {
+    width: 22rem;
+  }
+}
+@media (max-width: 700px) {
+  .btn {
+    height: 3.5rem;
+  }
+  .btn,
+  .btn:link,
+  .btn:visited {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+  .btn.grey {
+    display: inline-block;
+    padding: 0.7rem 0 0.7rem 0;
+  }
+  .btn.grey span {
+    vertical-align: top;
+  }
+  .btn.grey img {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+  .btn.grey:active img {
+    animation: spinAround 1s linear;
+  }
+  .btn.small {
+    width: 12.5rem;
+  }
+  .btn.big {
+    width: 18rem;
+  }
+}
+/*# sourceMappingURL=button.css.map */

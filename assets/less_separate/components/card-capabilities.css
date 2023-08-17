@@ -1,0 +1,150 @@
+.cap-card {
+  width: 30rem;
+  height: 20rem;
+  border-radius: 2rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: rgba(193, 199, 201, 0.3);
+  transition: all 0.8s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 821px) {
+  .cap-card {
+    opacity: 0;
+  }
+}
+.cap-card:hover .img {
+  opacity: 0;
+}
+.cap-card:hover .blur {
+  opacity: 1;
+}
+.cap-card .bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.cap-card .bg img {
+  width: 100%;
+}
+.cap-card .blur {
+  background: linear-gradient(90.84deg, rgba(159, 131, 214, 0.5) 19.94%, rgba(190, 149, 203, 0.5) 73.55%, rgba(174, 112, 176, 0.5) 107.91%), #ffffff;
+  border-radius: 2rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: opacity 0.2s ease-out;
+  opacity: 0;
+}
+.cap-card .top {
+  display: flex;
+  justify-content: space-between;
+}
+.cap-card .top > img {
+  width: 3rem;
+  height: 3rem;
+}
+.cap-card .bottom {
+  text-align: left;
+  color: #ffffff;
+}
+.cap-card .bottom h2 {
+  font-weight: 600;
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+  letter-spacing: 0.07em;
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+}
+.cap-card .bottom p {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: 0.03em;
+  opacity: 0.7;
+}
+.cap-card .inner {
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(193, 199, 201, 0.3);
+  border-radius: 2rem;
+  padding: 3rem 2.4rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background 0.5s ease-out;
+}
+@media (max-width: 1400px) {
+  .cap-card:nth-child(1) {
+    order: 1;
+  }
+  .cap-card:nth-child(2) {
+    order: 3;
+  }
+  .cap-card:nth-child(3) {
+    order: 5;
+  }
+  .cap-card:nth-child(4) {
+    order: 7;
+  }
+  .cap-card:nth-child(5) {
+    order: 2;
+  }
+  .cap-card:nth-child(6) {
+    order: 4;
+  }
+  .cap-card:nth-child(7) {
+    order: 6;
+  }
+  .cap-card:nth-child(8) {
+    order: 8;
+  }
+}
+@media (max-width: 700px) {
+  .cap-card {
+    height: 17rem;
+    width: 100%;
+  }
+  .cap-card:nth-child(1) {
+    order: 1;
+  }
+  .cap-card:nth-child(2) {
+    order: 2;
+  }
+  .cap-card:nth-child(3) {
+    order: 3;
+  }
+  .cap-card:nth-child(4) {
+    order: 4;
+  }
+  .cap-card:nth-child(5) {
+    order: 5;
+  }
+  .cap-card:nth-child(6) {
+    order: 6;
+  }
+  .cap-card:nth-child(7) {
+    order: 7;
+  }
+  .cap-card:nth-child(8) {
+    order: 8;
+  }
+  .cap-card .inner {
+    padding: 2rem;
+  }
+  .cap-card .bottom h2 {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+  .cap-card .bottom p {
+    margin-top: 0.8rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+}
+/*# sourceMappingURL=card-capabilities.css.map */

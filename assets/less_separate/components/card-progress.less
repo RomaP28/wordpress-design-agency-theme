@@ -1,0 +1,236 @@
+@import (reference) "../base/variables";
+@import (reference) "../base/fonts";
+
+@import (reference) "../base/animations";
+@import (reference) "../base/base";
+@import (reference) "../base/typography";
+
+@huge-font-size: 5rem;
+
+.progress {
+  margin-top: 7.5rem;
+  .row {
+    display: flex;
+    justify-content: space-between;
+    &:last-child{
+      margin-top: 5rem;
+    }
+  }
+
+  .card{
+    width: 30.45%;
+    cursor: pointer;
+  }
+
+  .card,
+  .card-2 {
+    padding: 3.8rem 2.2rem;
+    background: @color-bg-grey;
+    border: .1rem solid rgba(255, 255, 255, 0.2);
+    box-shadow: .7rem .7rem .7rem rgba(0, 0, 0, 0.05), -1rem -1rem 1rem rgba(255, 255, 255, 0.6);
+    border-radius: 2rem;
+    transition: all .2s;
+  }
+  .card-2 {
+    width: 21.8%;
+  }
+
+  .card{
+    &:hover{
+      background: rgba(159, 131, 214, 0.05);
+    }
+  }
+
+  .inner {
+    display: flex;
+    & > img {
+      width: 7.3rem;
+      height:auto;
+      //display: flex;
+      align-self: center;
+    }
+  }
+
+  .info {
+    margin-left: 3rem;
+    text-align: left;
+  }
+
+  .title {
+    font-size: @big-font-size;
+    line-height: 2.8rem;
+  }
+
+  .rating {
+    font-weight: 400;
+    margin-top: .6rem;
+    font-size: @small-font-size;
+    line-height: 2rem;
+    letter-spacing: 0.07em;
+  }
+
+  .member,
+  .star{
+    margin-top: .8rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.07em;
+    color: @color-text-grey;
+  }
+
+  .member{
+    font-weight: 400;
+  }
+
+ .star {
+   position: relative;
+   font-weight: 700;
+   margin-left: 2.4rem;
+   &:before{
+     content: '';
+     position: absolute;
+     top: 50%;
+     left: -2.4rem;
+     transform: translateY(-50%);
+     background: url('../../img/icons/star.webp') no-repeat center center/contain;
+     width: 1.4rem;
+     height: 1.4rem;
+   }
+  }
+
+  .card-2 {
+    padding: 3rem 6rem;
+    text-align: center;
+      .top {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 15rem;
+      }
+      img {
+        margin-right: 1.2rem;
+        width: 3rem;
+        height: 3rem;
+      }
+
+    .results {
+      margin-top: 1rem;
+      font-weight: 700;
+      font-size: @huge-font-size;
+      line-height: 6.2rem;
+      letter-spacing: 0.07em;
+      background: linear-gradient(90deg, #9E82D4 0%, #A283DD 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+
+    &:nth-child(3),
+    &:nth-child(4){
+      img {
+        margin-left: 1.3rem;
+        height: 2rem;
+      }
+    }
+  }
+}
+
+@media(max-width: 1150px){
+  .progress {
+    display: flex;
+    column-gap: unset;
+    padding: 0;
+    justify-content: space-between;
+    max-width: 63rem;
+    margin: 7.5rem auto 0;
+    .row {
+      width: 35rem;
+      flex-direction: column;
+      gap: 3rem;
+      &:last-child{
+        margin-top: 0;
+        width: 25rem;
+        gap: 4rem;
+      }
+    }
+    .card,
+    .card-2{
+      width: 100%;
+    }
+
+    .card-2 {
+      padding: 1.1rem 6rem;
+      .results {
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 5rem;
+        letter-spacing: 0.07em;
+      }
+    }
+  }
+}
+
+@media(max-width: 700px){
+  .progress {
+    display: block;
+    .row {
+      width: 100%;
+    }
+
+    .card{
+      padding: 2rem 1.5rem;
+    }
+    .inner {
+      max-width: 30rem;
+      margin: 0 auto;
+    }
+    .title {
+      font-size: @default-font-size;
+      line-height: 2.2rem;
+    }
+
+    .rating {
+      margin-top: .5rem;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+    }
+
+    .member,
+    .star{
+      margin-top: .5rem;
+    }
+
+    .row {
+      gap: 2rem;
+      &:last-child{
+        margin-top: 2rem;
+        width: 100%;
+        gap: 2rem;
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+    }
+
+    .card-2 {
+      width: 46.4%;
+      padding: 1.8rem .6rem;
+      text-align: center;
+
+      .top {
+        max-width: 12rem;
+      }
+      img.bricks{
+        margin-left: .5rem;
+        margin-right: .3rem;
+      }
+      .results {
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 3.8rem;
+        letter-spacing: 0.07em;
+      }
+    }
+  }
+}

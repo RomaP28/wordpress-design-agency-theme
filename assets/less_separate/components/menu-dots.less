@@ -1,0 +1,182 @@
+.menu-open{
+  cursor: pointer;
+  margin-left: 2.75rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+  position: relative;
+
+  div{
+    //flex: 0 0 .8rem;
+    flex: 0 0 26.6%;
+    border-radius: 50%;
+    background-image: linear-gradient(128.25deg, #3D3078 3.87%, #5B3E7C 61.31%, #B5838E 98.14%);
+    background-size: 3rem 3rem;
+    //transition: opacity .3s, transform .5s infinite;
+    transition: transform .4s .4s;
+
+    &:nth-child(1){
+      background-position: 0 0;
+    }
+    &:nth-child(2){
+      background-position: 2rem 0;
+    }
+    &:nth-child(3){
+      background-position: 1rem 0;
+    }
+    &:nth-child(4){
+      background-position: 0 2rem;
+    }
+    &:nth-child(5){
+      background-position: 2rem 2rem;
+    }
+    &:nth-child(6){
+      background-position: 1rem 2rem;
+    }
+    &:nth-child(7){
+      background-position: 0 1rem;
+    }
+    &:nth-child(8){
+      background-position: 2rem 1rem;
+    }
+    &:nth-child(9){
+      background-position: 1rem 1rem;
+    }
+  }
+  &:hover > div:nth-child(1){
+    animation: scaling 2s ease infinite;
+  }
+  &:hover > div:nth-child(2){
+    animation: scaling 2s ease .1s infinite;
+  }
+  &:hover > div:nth-child(3){
+    animation: scaling 2s ease .2s infinite;
+  }
+  &:hover > div:nth-child(4){
+    animation: scaling 2s ease .3s infinite;
+  }
+  &:hover > div:nth-child(5){
+    animation: scaling 2s ease .4s infinite;
+  }
+  &:hover > div:nth-child(6){
+    animation: scaling 2s ease .5s infinite;
+  }
+  &:hover > div:nth-child(7){
+    animation: scaling 2s ease .6s infinite;
+  }
+  &:hover > div:nth-child(8){
+    animation: scaling 2s ease .7s infinite;
+  }
+  &:hover > div:nth-child(9){
+    animation: scaling 2s ease .8s infinite;
+  }
+
+
+  &.open {
+    div{
+      animation: none !important;
+      transition: transform .3s;
+      &:nth-child(1){
+        transform: translate(1.3rem, 1.3rem);
+      }
+      &:nth-child(2){
+        transform: translateY(1.3rem);
+      }
+      &:nth-child(3){
+        transform: translate(-1.3rem, 1.3rem);
+      }
+      &:nth-child(4){
+        transform: translateX(1.3rem);
+      }
+      &:nth-child(6){
+        transform: translateX(-1.3rem);
+      }
+      &:nth-child(7){
+        transform: translate(1.3rem, -1.3rem);
+      }
+      &:nth-child(8){
+        transform: translateY(-1.3rem);
+      }
+      &:nth-child(9){
+        transform: translate(-1.3rem, -1.3rem);
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .menu-open {
+    margin-left: .8rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .menu-open{
+    width: 2.5rem;
+    height: 2.5rem;
+    gap: .2rem;
+
+    div {
+      flex: 0 0 .7rem;
+      background-size: 2.5rem 2.5rem;
+      &:nth-child(1){
+        background-position: 0 0;
+      }
+      &:nth-child(2){
+        background-position: 1.75rem 0;
+      }
+      &:nth-child(3){
+        background-position: .75rem 0;
+      }
+      &:nth-child(4){
+        background-position: 0 1.75rem;
+      }
+      &:nth-child(5){
+        background-position: 1.75rem 1.75rem;
+      }
+      &:nth-child(6){
+        background-position: .75rem 1.75rem;
+      }
+      &:nth-child(7){
+        background-position: 0 .75rem;
+      }
+      &:nth-child(8){
+        background-position: 1.75rem .75rem;
+      }
+      &:nth-child(9){
+        background-position: .75rem .75rem;
+      }
+    }
+
+    &.open {
+      div{
+        &:nth-child(1){
+          transform: translate(.9rem, .9rem);
+        }
+        &:nth-child(2){
+          transform: translateY(.9rem);
+        }
+        &:nth-child(3){
+          transform: translate(-.9rem, .9rem);
+        }
+        &:nth-child(4){
+          transform: translateX(.9rem);
+        }
+        &:nth-child(6){
+          transform: translateX(-.9rem);
+        }
+        &:nth-child(7){
+          transform: translate(.9rem, -.9rem);
+        }
+        &:nth-child(8){
+          transform: translateY(-.9rem);
+        }
+        &:nth-child(9){
+          transform: translate(-.9rem, -.9rem);
+        }
+      }
+    }
+  }
+}

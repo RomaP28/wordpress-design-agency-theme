@@ -1,0 +1,50 @@
+.composition {
+  position: relative;
+  width: 84rem;
+  height: 64.8rem;
+}
+.composition img,
+.composition video {
+  position: absolute;
+  border-radius: 1.1rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
+  transition: all 0.3s;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .composition:hover img:not(:hover),
+  .composition:hover video:not(:hover) {
+    transform: scale(0.95);
+  }
+  .composition img:hover,
+  .composition video:hover {
+    z-index: 2;
+    transform: scale(1.05);
+  }
+}
+@media (max-width: 1300px) {
+  .composition {
+    margin-top: 5rem;
+  }
+}
+@media (max-width: 1100px) {
+  .composition {
+    width: 73.8rem;
+  }
+}
+@media (max-width: 700px) {
+  .composition {
+    width: 100%;
+    height: fit-content;
+  }
+  .composition img,
+  .composition video {
+    width: 100% !important;
+    position: static;
+  }
+  .composition img:not(:last-child),
+  .composition video:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+/*# sourceMappingURL=composition.css.map */

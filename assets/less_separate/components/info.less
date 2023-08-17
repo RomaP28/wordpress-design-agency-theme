@@ -1,0 +1,319 @@
+@import (reference) "../base/variables";
+@import (reference) "../base/fonts";
+
+@import (reference) "../base/animations";
+@import (reference) "../base/base";
+@import (reference) "../base/typography";
+
+.info{
+  &-block {
+    position: fixed;
+    z-index: 90;
+    left: 0;
+    bottom: 10.7rem;
+    animation: .8s ease-out slideInFromLeft;
+    @media (max-height: 900px) {
+      bottom: .5rem;
+    }
+
+    img{
+      width: 100%;
+    }
+
+    .icon-container{
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 1.3rem 2.7rem 1.2rem 1.2rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      -webkit-backdrop-filter: blur(2px);
+      backdrop-filter: blur(2px);
+      border-radius: 0 5rem 5rem 0;
+      border: 1px solid #BE95CB;
+      border-left: none;
+      transition: padding-left .3s ease-out;
+    }
+
+    .icon {
+      font-family: 'Libre Baskerville';
+      display: inline-block;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 4rem;
+      line-height: 5rem;
+      width: 1.6rem;
+      background-image: linear-gradient(to right, #FF906C 5%, #BA50FA 35%);
+      -webkit-background-clip: text;
+      -webkit-text-stroke: 2px transparent;
+      color: @color-white;
+    }
+
+    #toc_container{
+      //margin-top: 10rem;
+      background: none;
+      border: none;
+      font-size: inherit;
+      padding: 0;
+
+      ul {
+        margin-left: 0;
+
+        li{
+          &:before{
+            content: none;
+            margin-left: 0;
+          }
+        }
+      }
+
+      & p.toc_title,
+      & a:link,
+      & a:visited {
+        text-align: left;
+        text-decoration: none;
+        color: @color-text-grey;
+      }
+
+      & a{
+        font-weight: 300;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        letter-spacing: 0.03em;
+        font-style: italic;
+      }
+    }
+
+  &.open {
+    z-index: 101;
+    .info-container {
+      position: relative;
+      left: 4rem;
+      z-index: 2;
+      display: block;
+      width: 45rem;
+      opacity: 1;
+      height: 60rem;
+      //padding-bottom: 3.4rem;
+      overflow: hidden;
+      border-radius: 2rem;
+      border: 1px solid #EFEFEF;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+
+      @media (max-width: 1150px) {
+        width: 34.5rem;
+        left: 1.5rem;
+      }
+    }
+    .info-header{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 101;
+    }
+    .content{
+      background: rgba(@color-white, 0.8);
+      -webkit-backdrop-filter: blur(1rem);
+      backdrop-filter: blur(1rem);
+      padding: 10rem 1rem 0 3rem;
+      height: 60rem;
+
+      //margin-top: 5rem;
+
+      .inner{
+        padding-right: 2rem;
+        padding-bottom: 3rem;
+        height: 98%;
+        overflow: auto;
+        overflow-x: hidden;
+        position: relative;
+        @media (max-height: 900px) {
+          height: 95%;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          right: .45rem;
+          top: 0; //.2rem;
+          width: .1rem;
+          height: 100%; //calc(100% - 2rem); //-1.5rem;
+          background: @color-text-grey;
+        }
+
+        //.simplebar-track.simplebar-vertical {
+        //  top: 2rem;
+        //}
+
+        .simplebar-scrollbar::before {
+          //top: 0;
+          width: .7rem;
+          opacity: 1;
+          background: rgba(@color-primary-red, 1);
+          top: 0;
+          bottom: 0;
+        }
+      }
+    }
+    .simplebar-content{
+      padding-bottom: 0 !important;
+    }
+    .simplebar-content {
+      figcaption,
+      h1,
+      h2,
+      h3 {
+        &:not(:first-child){
+          margin-top: 4.5rem;
+        }
+        //margin-top: 10rem;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        letter-spacing: 0.03em;
+      }
+      p:first-child{
+        //margin-top: 10rem;
+      }
+    }
+
+    p, .thin{
+      font-weight: 300;
+      font-size: 1.6rem;
+      line-height: 2rem;
+      letter-spacing: 0.03em;
+    }
+
+    ol,
+    ul{
+      margin: 1.5rem;
+      li{
+        position: relative;
+        font-weight: 300;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        letter-spacing: 0.07em;
+        //margin-left: 1.4rem;
+        list-style: none;
+        &:not(:last-of-type){
+          margin-bottom: 1.5rem;
+        }
+        &:before {
+          content: '';
+          background: #D9D9D9;
+          position: absolute;
+          width: .8rem;
+          height: .8rem;
+          border-radius: 50%;
+          left: -1.4rem;
+          top: .6rem;
+        }
+      }
+    }
+    a{
+      &:link,
+      &:visited {
+        text-decoration: none;
+        color: @color-black;
+      }
+    }
+    figure{
+      margin-top: 4.5rem;
+    }
+    blockquote{
+      margin: 1.5rem auto 1.5rem 0;
+      p:last-child {
+        text-align: right;
+        font-weight: 300;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.03em;
+      }
+    }
+    .icon-container {
+      display: none;
+    }
+    //.marked{
+    //  background-color: yellow;
+    //}
+    //a.link{
+    //  text-decoration: underline;
+    //  color: blue;
+    //
+    //}
+  }
+
+  &:hover{
+     .icon-container {
+        padding: 1.3rem 2.7rem 1.2rem 2.2rem;
+      }
+   }
+}
+  &-container {
+    transition: opacity .2s ease-out;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+
+  &-header{
+    background: #FFFFFF;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.15);
+    padding: 1.8rem 2.1rem 1.8rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1rem;
+
+    span{
+      font-weight: 700;
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      text-align: center;
+      letter-spacing: 0.03em;
+    }
+  }
+
+  &-close{
+  cursor: pointer;
+    img{
+      margin-top: 3px;
+      width: 1.7rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .info {
+    &-block {
+      .icon-container{
+        padding: 1rem 1.8rem 1rem .8rem;
+      }
+      .icon{
+        font-size: 3.5rem;
+      }
+
+      &.open {
+        h3{
+          margin: 3rem 0;
+          font-weight: 700;
+          font-size: 1.6rem;
+          line-height: 2rem;
+          letter-spacing: 0.03em;
+        }
+        p{
+          font-weight: 300;
+          font-size: 1.4rem;
+          line-height: 1.8rem;
+          letter-spacing: 0.03em;
+        }
+      }
+
+      &:hover{
+        .icon-container {
+          padding: 1rem 1.8rem 1rem .8rem;
+        }
+      }
+    }
+  }
+}

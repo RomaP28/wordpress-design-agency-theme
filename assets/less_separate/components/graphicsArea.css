@@ -1,0 +1,302 @@
+.graphics,
+.services-left,
+.right-top {
+  display: block;
+}
+@media (max-width: 820px) {
+  .graphics,
+  .services-left,
+  .right-top {
+    display: none;
+  }
+}
+.graphSecondary {
+  width: 160rem;
+  height: 50.7rem;
+}
+.graphSecondaryColorLine {
+  width: 159.8rem;
+  height: 48.8rem;
+}
+.graphPrimary {
+  width: 160rem;
+  height: 50.8rem;
+}
+.graphPrimaryColorLine {
+  width: 160rem;
+  height: 48.8rem;
+}
+.right-top {
+  position: absolute;
+  right: -14rem;
+  top: -14.7rem;
+  font-family: "Lexend";
+  font-style: normal;
+  white-space: nowrap;
+}
+.right-top span {
+  position: absolute;
+}
+.right-top span:nth-child(1) {
+  top: 6.4rem;
+  right: 50rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.07em;
+  background: linear-gradient(91.31deg, rgba(255, 144, 108, 0.2) 8.38%, rgba(186, 80, 251, 0.2) 39.74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.right-top span:nth-child(1)::before {
+  content: "";
+  display: inline-block;
+  width: 53.6rem;
+  height: 0.1rem;
+  top: -0.1rem;
+  left: -4.5rem;
+  position: absolute;
+  background-color: rgba(38, 55, 62, 0.1);
+}
+.right-top span:nth-child(1)::after {
+  content: "";
+  display: inline-block;
+  width: 62.2rem;
+  height: 0.1rem;
+  bottom: -2.4rem;
+  left: -14.2rem;
+  position: absolute;
+  background-color: rgba(38, 55, 62, 0.1);
+}
+.right-top span:nth-child(2) {
+  top: 6.6rem;
+  right: 18.2rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.07em;
+  color: rgba(91, 36, 249, 0.7);
+}
+.right-top span:nth-child(3) {
+  top: 19.8rem;
+  right: 68rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.07em;
+  color: rgba(227, 63, 191, 0.6);
+}
+.right-top span:nth-child(4) {
+  top: 15.6rem;
+  right: 33.8rem;
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  letter-spacing: 0.07em;
+  color: rgba(111, 125, 253, 0.15);
+}
+.right-top span:nth-child(4)::before {
+  content: "";
+  display: inline-block;
+  width: 14.3rem;
+  height: 0.1rem;
+  top: -0.1rem;
+  right: -14.3rem;
+  position: absolute;
+  background-color: rgba(38, 55, 62, 0.1);
+}
+.right-top span:nth-child(4)::after {
+  content: "";
+  display: inline-block;
+  width: 62.2rem;
+  height: 0.1rem;
+  bottom: -0.1rem;
+  left: -21rem;
+  position: absolute;
+  background-color: rgba(38, 55, 62, 0.1);
+}
+.right-top span:nth-child(5) {
+  top: 12.8rem;
+  right: 4.6rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.07em;
+  color: rgba(243, 75, 75, 0.6);
+}
+.right-top span:nth-child(5)::before {
+  content: "";
+  display: inline-block;
+  width: 8.7rem;
+  height: 0.1px;
+  top: 50%;
+  left: -39.3rem;
+  position: absolute;
+  background-color: rgba(38, 55, 62, 0.1);
+}
+.right-top span:nth-child(6) {
+  top: 21.3rem;
+  right: 18.1rem;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: 0.07em;
+  color: #9f83d6;
+}
+.right-top span:nth-child(6)::before {
+  content: "";
+  display: inline-block;
+  width: 53.6rem;
+  height: 0.1rem;
+  bottom: -0.1rem;
+  left: -39rem;
+  position: absolute;
+  background-color: rgba(38, 55, 62, 0.1);
+}
+.right-top span:nth-child(7) {
+  top: 39.9rem;
+  right: 61.5rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.07em;
+  color: rgba(185, 39, 7, 0.4);
+}
+.right-top span:nth-child(7)::before {
+  content: "";
+  display: inline-block;
+  width: 64.5rem;
+  height: 0.1rem;
+  top: -12.2rem;
+  left: -11.6rem;
+  position: absolute;
+  background-color: rgba(38, 55, 62, 0.1);
+}
+.right-top span:nth-child(8) {
+  top: 31.3rem;
+  right: 25.2rem;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.07em;
+  color: rgba(228, 169, 81, 0.4);
+}
+.right-top span:nth-child(8)::before {
+  content: "";
+  display: inline-block;
+  width: 51.7rem;
+  height: 0.1rem;
+  top: 1rem;
+  right: -22rem;
+  position: absolute;
+  background-color: rgba(38, 55, 62, 0.1);
+}
+.right-top span:nth-child(9) {
+  top: 34.7rem;
+  right: 9.8rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.07em;
+  color: #16858c;
+}
+.services-left {
+  position: absolute;
+  right: 9rem;
+  top: -5rem;
+}
+.services-left .right-bottom {
+  width: 54rem;
+  height: 58rem;
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.07em;
+}
+.services-left .right-bottom ul {
+  transform: rotate(-90deg);
+  height: 54rem;
+  width: 58rem;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.services-left .right-bottom ul li {
+  height: 10.8rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 0;
+  background: linear-gradient(to right, var(--myColor1) 1%, var(--myColor2)) 60%;
+  padding: 0;
+  transition: padding 300ms, color 300ms, --myColor1 300ms, --myColor2 300ms, border-radius 300ms;
+}
+.services-left .right-bottom ul li:nth-child(1),
+.services-left .right-bottom ul li:nth-child(5) {
+  color: rgba(38, 55, 62, 0.3);
+}
+.services-left .right-bottom ul li:nth-child(2),
+.services-left .right-bottom ul li:nth-child(3),
+.services-left .right-bottom ul li:nth-child(4) {
+  color: #26373e;
+}
+@property --myColor1 {
+  syntax: "<color>";
+  initial-value: transparent;
+  inherits: false;
+}
+@property --myColor2 {
+  syntax: "<color>";
+  initial-value: transparent;
+  inherits: false;
+}
+.services-left .right-bottom ul li:hover {
+  cursor: default;
+  padding: 0 0 0 4rem;
+  color: #ffffff;
+  border-radius: 5.4rem 0 0 5.4rem;
+  --myColor1: rgba(144, 144, 144, 0.2);
+  --myColor2: transparent;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+.graphicArea {
+  position: absolute;
+  width: 100%;
+  top: -16.7rem;
+}
+.graphicArea .graphSecondary {
+  position: absolute;
+  top: 6.5rem;
+  right: -14rem;
+}
+.graphicArea .graphSecondaryColorLine {
+  position: absolute;
+  top: 7.5rem;
+  right: -14rem;
+}
+.graphicArea .graphPrimary {
+  position: absolute;
+  top: 6.8rem;
+  right: -14rem;
+}
+.graphicArea .graphPrimaryColorLine {
+  position: absolute;
+  top: 7.8rem;
+  right: -14rem;
+}
+/*# sourceMappingURL=graphicsArea.css.map */

@@ -1,0 +1,160 @@
+.top-block {
+  width: 100%;
+  height: 100vh;
+  max-height: 98rem;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5s;
+}
+.top-block .container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 132rem;
+  height: 100%;
+  position: relative;
+}
+.tagline {
+  background: #F8F7F7;
+  width: 100%;
+  padding: 15rem 0;
+}
+.tagline .container {
+  margin: 0 auto;
+  max-width: 115rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 11.8rem;
+}
+.tagline h2,
+.tagline p {
+  text-align: left;
+}
+.tagline h2 {
+  min-width: 58.1rem;
+}
+.details {
+  background-color: #ffffff;
+  background-position: top left, bottom right;
+  background-repeat: no-repeat, no-repeat;
+  width: 100%;
+  padding: 15rem 1.5rem;
+}
+.details .container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 132rem;
+}
+.details .text-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 41rem;
+}
+.details h2,
+.details p {
+  text-align: left;
+  max-width: 45.1rem;
+}
+.details p {
+  margin-top: 3rem;
+  line-height: 140%;
+}
+.details-review {
+  width: 100%;
+  padding: 15rem 1.5rem;
+}
+.details-review .container {
+  margin: 0 auto;
+  max-width: 115rem;
+  text-align: center;
+}
+.details-review .container p {
+  line-height: 140%;
+  font-weight: 300;
+}
+.details-review .container img {
+  margin-top: 5rem;
+  max-width: 87.8rem;
+}
+@media (max-width: 1200px) {
+  .top-block {
+    max-height: unset;
+    height: auto;
+  }
+  .top-block .container {
+    max-width: 76.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-flow: column-reverse;
+    margin-top: 15.5rem;
+  }
+  .tagline {
+    background: url('../../img/macshadow-mobile.webp') no-repeat center center / cover, #F8F7F7;
+    mix-blend-mode: multiply;
+    width: 100%;
+    padding: 15rem 1.5rem;
+  }
+  .tagline .container {
+    margin: 0 auto;
+    max-width: 58rem;
+    display: block;
+    column-gap: unset;
+  }
+  .tagline h2,
+  .tagline p {
+    text-align: center;
+  }
+  .tagline h2 {
+    min-width: unset;
+  }
+  .tagline p {
+    margin-top: 5rem;
+  }
+  .details .container {
+    flex-flow: column-reverse;
+    align-items: center;
+  }
+  .details h2,
+  .details p {
+    text-align: center;
+    max-width: unset;
+  }
+  .details .text-area {
+    max-width: unset;
+  }
+  .details-review .container p {
+    margin: 0 auto;
+    max-width: 68.2rem;
+  }
+  .details-review .container img {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .top-block .container {
+    align-items: center;
+    height: fit-content;
+    margin-top: 13.9rem;
+  }
+  .tagline,
+  .details,
+  .details-review {
+    padding: 8rem 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .details-review .container {
+    overflow: hidden;
+  }
+  .details-review .container img {
+    margin-top: 3rem;
+    margin-left: 3rem;
+    width: auto;
+    height: 32.5rem;
+  }
+}
+/*# sourceMappingURL=case-studies.css.map */

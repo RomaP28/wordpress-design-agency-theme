@@ -1,0 +1,649 @@
+@import (reference) "../base/variables";
+@import (reference) "../base/fonts";
+
+@import (reference) "../base/animations";
+@import (reference) "../base/base";
+@import (reference) "../base/typography";
+
+.header-form{
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 0;
+  width: 0;
+  opacity: 0;
+  padding: 7rem 0 18.3rem;
+  transition: opacity .3s .1s, height .1s .6s, width .1s .6s;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+  &.open{
+    height: 100%;
+    width: 70rem;
+    opacity: 1;
+    transition: opacity .7s .3s, height .1s, width .1s;
+  }
+  h2{
+    text-align: center;
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 4.4rem;
+    letter-spacing: 0.07em;
+    color: @color-white;
+    margin-bottom: 0;
+
+  }
+  form{
+    margin-top: 10rem;
+  }
+  //
+  //input::placeholder {
+  //  opacity: 0;
+  //  color: rgba(0, 0, 0, 0.0);
+  //}
+
+  span.phone {
+    display: block;
+  }
+
+  .iti {
+    width: 100%;
+  }
+
+  .iti__flag-container{
+    margin-left: 29rem;
+    transform: translateY(-3.3rem);
+    z-index: 1;
+  }
+
+  input[type="tel"] {
+    padding-left: 34rem;
+    padding-bottom: 2.3rem;
+    transform: translateY(-2.3rem);
+
+    &::placeholder {
+        color: #C6C6C6;
+    }
+  }
+
+  label, input, .cd-upload-btn{
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.05em;
+    color: @color-text-grey;
+  }
+
+  .wpcf7-form-control-wrap{
+    position: relative;
+  }
+
+  input:not([type='submit']):not([type='file']),
+  .textarea{
+    width: 100%;
+    min-width: 7rem;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    border-bottom: 1px solid @color-white;
+    color: @color-white;
+    border-radius: 0;
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:focus {
+      transition: background-color 600000s 0s, color 600000s 0s;
+    }
+  }
+  .field-group:not(:last-of-type){
+    margin-bottom: 4.2rem;
+  }
+  .textarea{
+    cursor: text;
+    display: inline-block;
+    overflow: hidden;
+    resize: none;
+    min-height: 2rem;
+  }
+
+  .original-textarea{
+    display: none;
+  }
+
+  .range-group{
+    border-bottom: 1px solid @color-white;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    label{
+      display: flex;
+      align-items: center;
+
+      &:last-of-type{
+        margin-left: auto;
+        width: 32rem;
+        margin-top: 2px;
+      }
+    }
+    .budget{
+      width: 100%;
+      margin: -1.5rem 1rem 0;
+
+      @media(max-width: 820px){
+        margin: -0.7rem 1rem 0;
+      }
+
+      &-value{
+        display: none;
+      }
+    }
+    .dollar-sign{
+      margin-left: .5rem;
+    }
+    .linebreake {
+      display: none;
+    }
+    input[type='number'],
+    .dollar-sign{
+      font-family: "Lexend", sans-serif;
+      font-weight: 700;
+      font-size: 2.4rem;
+      line-height: 3rem;
+      letter-spacing: 0.05em;
+      color: @color-white;
+    }
+    input[type='number']{
+      -moz-appearance:textfield;
+      margin-left: .5rem;
+      border-bottom: none !important;
+      text-align: right;
+      width: 13rem;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      & + .wpcf7-not-valid-tip{
+        position: absolute;
+        white-space: nowrap;
+        top: 2.4rem;
+      }
+    }
+  }
+
+  .uacf7-form-664 input[type=range] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    background: rgba(198, 198, 198, 0.3);
+    border-bottom: none;
+
+    &::-moz-range-thumb,
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      border: none;
+      width: 5px;
+      height: 21px;
+      border-radius: 2px;
+      background: #F34B4B;
+      margin-top: -4px;
+    }
+  }
+
+  input[type=file]{
+    display: none;
+  }
+
+  .file-upload-group{
+    .codedropz-upload-wrapper{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: end;
+      justify-content: flex-end;
+      gap: 1rem;
+    }
+
+    .codedropz-upload-container {
+      padding: 0;
+      margin-bottom: .6rem;
+    }
+
+    .codedropz-upload-handler{
+      border: none;
+      margin-bottom: 0;
+      margin-right: auto;
+      width: 27.7rem;
+    }
+    .cd-upload-btn{
+      visibility: hidden;
+
+      &:after{
+        content: '+ Attach RFP / Documents';
+        visibility: visible;
+        display: block;
+        white-space: nowrap;
+      }
+    }
+
+    h3,
+    h3 + span,
+    .dnd-upload-counter{
+      display: none;
+    }
+
+    .dnd-upload-status{
+      padding: 0;
+      border: 1px solid @color-white;
+      border-radius: 5rem;
+      width: 17rem;
+      position: relative;
+
+      .dnd-upload-image{
+        display: none;
+      }
+      .dnd-upload-details {
+        width: auto;
+        max-width: 13.5rem;
+        padding-left: 0;
+
+        .dnd-progress-bar,
+        & .name em {
+          display: none;
+        }
+        .name{
+          font-weight: 400;
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+          color: @color-white;
+          letter-spacing: 0.07em;
+          padding: .6rem 0 .5rem 1.4rem;
+
+          display: block;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          span{
+            padding: 0;
+          }
+        }
+
+        .remove-file {
+          position: absolute;
+          right: 1.2rem;
+          top: 50%;
+          transform: translateY(-50%);
+
+          span:after {
+            content: '';
+            padding: .85rem;
+            background: url(../../img/icons/file-close.webp) no-repeat center center / contain;
+            background-size: 100%;
+          }
+        }
+
+        span.has-error{
+          position: absolute;
+          white-space: nowrap;
+          font-size: 1.2rem;
+        }
+      }
+
+    }
+  }
+
+  .submit-group{
+    margin: 8rem auto 0;
+    width: fit-content;
+  }
+  input[type='submit']{
+    width: 20rem;
+    height: 5rem;
+    background-color: transparent;
+    border-color: @color-white;
+    color: @color-white;
+    padding-right: 2.7rem;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    letter-spacing: 0.07em;
+    //text-align: left;
+    transition:  0.15s background-position ease-in-out, 0.15s border ease-in-out;
+
+    &:hover{
+      border: 4px solid;
+      background-position: center right 2.4rem;
+    }
+
+    @media(max-width: 700px){
+
+      font-size: 1.5rem;
+      line-height: 1.9rem;
+    }
+  }
+  .submit-arrow{
+    background: url(../../img/icons/arrow-right.svg) no-repeat center right 2.7rem;
+    background-size: 1.8rem 1.2rem;
+  }
+  .wpcf7-response-output,
+  .wpcf7-spinner {
+    display: none;
+  }
+  .wpcf7-not-valid-tip{
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    bottom: -2.5rem;
+    color: @color-primary-red;
+    white-space: nowrap;
+  }
+  .screen-reader-response{
+    display: none;
+  }
+}
+
+@media(min-width: 1400px) and (max-width: 1700px) and (max-height: 900px){
+  .header-form{
+    padding: 3rem 0;
+    form{
+      margin-top: 5rem;
+    }
+  }
+}
+
+@media(max-width: 820px){
+  .header-form {
+    left: 5rem;
+    transform: translateX(0);
+    &.open {
+      width: 60rem;
+    }
+    h2{
+      font-size: 3rem;
+      line-height: 3.8rem;
+    }
+    label, input, .textarea, .cd-upload-btn{
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
+    .range-group {
+      label:last-of-type{
+        margin-left: auto;
+        width: 28rem;
+      }
+
+      input[type=number],
+      .dollar-sign {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+
+    }
+
+    .file-upload-group{
+      .dnd-upload-status {
+        width: 15rem;
+        .dnd-upload-details {
+          max-width: 11rem;
+          .name {
+            font-size: 1.5rem;
+            line-height: 1.9rem;
+            padding: .5rem 0 .5rem 1.2rem;
+          }
+        }
+      }
+    }
+    input[type='submit']{
+      width: 18rem;
+      height: 4rem;
+      font-size: 1.5rem;
+      line-height: 1.9rem;
+      padding-top: .1rem;
+    }
+  }
+}
+
+@media(max-width: 700px){
+  .header-form{
+    font-size: initial !important;
+    padding: 3rem 0;
+    left: 1.5rem;
+    &.open{
+      width: 26rem;
+    }
+    h2{
+      font-size: 2rem;
+      line-height: 2.5rem;
+      margin: 0 0 0 2rem;
+      white-space: nowrap;
+    }
+    form{
+      margin: 4rem 0 0 2rem;
+      width: 22rem;
+    }
+
+    .iti__flag-container{
+      margin-left: unset;
+      transform: unset;
+    }
+
+    input[type="tel"] {
+      padding-left: 5rem;
+      padding-bottom: unset;
+      transform:unset;
+    }
+
+    label, input, .textarea, .cd-upload-btn{
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+    }
+
+    .field-group:not(:last-of-type){
+      margin-bottom: 3rem;
+    }
+    .range-group{
+      padding-bottom: 1rem;
+      flex-direction: column;
+
+
+      label{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        position: relative;
+
+        &:last-of-type{
+          flex-direction: row;
+          align-items: center;
+        }
+      }
+      .budget{
+        max-width: 16rem;
+        padding-top: unset;
+      }
+
+      .dollar-sign {
+        position: absolute;
+        left: 32%;
+        top: 40%;
+        margin-top: 0;
+      }
+
+      input[type='number'],
+      .dollar-sign {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        margin-top: 1rem;
+      }
+      input[type='number']{
+        margin-left: 0;
+        text-align: left;
+      }
+    }
+
+    .file-upload-group{
+      .codedropz-upload-wrapper {
+        justify-content: flex-start;
+      }
+
+      .dnd-upload-status {
+        width: 12rem;
+        .dnd-upload-details {
+          max-width: 8.9rem;
+          .name {
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            padding: .6rem 0 .6rem .8rem;
+          }
+          .remove-file {
+            right: 1rem;
+          }
+        }
+      }
+    }
+
+    .submit-group{
+      margin: 4rem 0 0 0;
+    }
+    input[type='submit']{
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      width: 15rem;
+      height: 3.5rem;
+      //padding: 0 0 .1rem 1.7rem;
+      //background: url(../../img/icons/arrow-right.svg) no-repeat center right 1.5rem;
+    }
+    .submit-arrow{
+      background: url(../../img/icons/arrow-right.svg) no-repeat center right 1.5rem;
+    }
+  }
+}
+
+.thank-you-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity .3s .2s, height .1s .3s, width .1s .3s;
+  &::before{
+    content: '';
+    position: absolute;
+    background: linear-gradient(rgba(87, 54, 88, 0.7), rgba(87, 54, 88, 0.7)), url(../../img/header_form_blur_bg.webp) no-repeat top center/cover;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transition: opacity .3s .2s, height .1s .3s, width .1s .3s;
+    z-index: -1;
+  }
+
+  h2, .btn, p{
+    display: none;
+  }
+
+  &.open{
+    padding: 7rem 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 1;
+    transition: opacity .4s .1s, height .1s, width .1s;
+
+    &::before{
+      opacity: 1;
+      width: 100%;
+      height: 100%;
+      transition: opacity .4s .1s, height .1s, width .1s;
+    }
+
+
+    h2, .btn, p{
+      display: flex;
+    }
+
+    h2{
+      font-weight: 700;
+      font-size: 3.5rem;
+      line-height: 4.4rem;
+      letter-spacing: 0.07em;
+      color: @color-white;
+      margin-bottom: 0;
+    }
+    p{
+      font-weight: 400;
+      font-size: 2.2rem;
+      line-height: 2.8rem;
+      letter-spacing: 0.05em;
+      color: @color-white;
+      max-width: 55rem;
+      margin-top: 5rem;
+      text-align: center;
+    }
+
+    .btn{
+      margin-top: 5rem;
+      background: transparent;
+      color: @color-white;
+      border-color: @color-white;
+      width: 10rem;
+      svg{
+        margin-left: 1rem;
+        width: 1.8rem;
+        height: 1.2rem;
+      }
+      &:hover{
+        background: transparent;
+        color: @color-white;
+        border: 4px solid @color-white;
+      }
+    }
+
+    @media (max-width: 820px) {
+      h2{
+        font-size: 3rem;
+        line-height: 3.8rem;
+      }
+      p{
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        max-width: 46.6rem;
+        margin-top: 4rem;
+      }
+      .btn{
+        margin-top: 4rem;
+      }
+    }
+    @media (max-width: 700px) {
+      h2 p .btn {
+        transform: translateY(-7rem);
+      }
+      h2{
+        font-size: 2rem;
+        line-height: 3.8rem;
+      }
+      p{
+        font-size: 1.4rem;
+        line-height: 2rem;
+        max-width: 26rem;
+        margin-top: 3rem;
+      }
+      .btn{
+        margin-top: 3rem;
+        padding: 0.8rem 0;
+      }
+    }
+  }
+}

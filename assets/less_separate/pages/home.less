@@ -1,0 +1,282 @@
+@import (reference) "../base/variables";
+@import (reference) "../base/fonts";
+
+@import (reference) "../base/animations";
+@import (reference) "../base/base";
+@import (reference) "../base/typography";
+
+.top-section {
+  width: 100%;
+  min-height: 90rem;
+  height: 100vh;
+  max-height: 98rem;
+  //height: 98rem;
+  background-image: linear-gradient(90.84deg,
+              rgba(159, 131, 214, 0.5) 19.94%,
+              rgba(190, 149, 203, 0.5) 73.55%,
+              rgba(174, 112, 176, 0.5) 107.91%);
+  overflow: hidden;
+  position: relative;
+}
+
+.work,
+.capabilities,
+.blog,
+.reviews,
+.contact-us {
+  overflow: hidden;
+  background: @color-white;
+  padding: 15rem 1.5rem;
+  .container{
+    max-width: 132rem;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .card-container{
+    margin-top: 7.5rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .paragraph{
+    margin: 7.5rem auto 0;
+  }
+}
+
+.work {
+  .swiper{
+    display: none;
+  }
+  .card-container{
+    row-gap: 7.5rem;
+    column-gap: 5rem;
+  }
+}
+
+.reviews .swiper,
+.capabilities .btn,
+.work .paragraph + .btn,
+.approach .row:first-of-type{
+  margin-top: 7.5rem;
+}
+
+.capabilities .card-container{
+  gap: 4rem;
+  justify-content: center;
+}
+
+.rewards,
+.approach,
+.brands{
+  overflow: hidden;
+  background: @color-bg-grey;
+  padding: 15rem 1.5rem;
+  .container{
+    max-width: 115rem;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .paragraph{
+    margin: 7.5rem auto 0;
+  }
+}
+
+.blog {
+  background: @color-bg-dark;
+  .h-primary {
+    color: @color-white;
+  }
+  .card-container{
+    justify-content: space-between;
+    row-gap: 7.5rem;
+  }
+}
+
+.rewards .h-primary {
+  text-transform: uppercase;
+}
+
+.rewards .h-secondary {
+  letter-spacing: 0.07em;
+}
+
+.brands{
+  padding: 8rem 1.5rem;
+  .container{
+    max-width: unset;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5rem;
+  }
+}
+
+.contact-us{
+  .container {
+    max-width: 115rem;
+  }
+}
+
+@media(max-width: 1433px) {
+  .work,
+  .capabilities,
+  .reviews,
+  .contact-us,
+  .rewards,
+  .approach{
+    .paragraph{
+      margin: 5rem auto 0;
+    }
+  }
+
+  .work,
+  .capabilities,
+  .reviews,
+  .contact-us {
+    .card-container{
+      margin-top: 5rem;
+    }
+  }
+
+  .reviews .swiper,
+  .capabilities .btn,
+  .work .paragraph + .btn,
+  .approach .row:first-of-type{
+    margin-top: 5rem;
+  }
+
+  .work .card-container{
+    row-gap: 5rem;
+    column-gap: 2.9rem;
+  }
+
+  .capabilities .card-container{
+    gap: 5rem;
+    margin: 7.5rem auto 0;
+  }
+  .blog .card-container{
+    //gap: 5rem;
+    margin: 7.5rem auto 0;
+  }
+
+  .brands {
+    .container {
+      max-width: 70rem;
+    }
+  }
+}
+@media(max-width: 820px) {
+  .top-section{
+    max-height: unset;
+  }
+  .capabilities .card-container{
+      max-width: 65rem;
+  }
+
+  .blog .card-container{
+    justify-content: space-evenly;
+  }
+}
+
+
+@media(max-width: 768px) {
+  .rewards {
+    .h-primary {
+      text-transform: unset;
+    }
+    .progress{
+      margin-top: 5rem;
+    }
+  }
+}
+
+@media(max-width: 700px) {
+  .work,
+  .capabilities,
+  .reviews,
+  .contact-us,
+  .rewards,
+  .approach{
+    .paragraph{
+      margin: 3rem auto 0;
+    }
+  }
+
+  .top-section {
+    min-height: 65rem;
+  }
+
+  .work,
+  .capabilities,
+  .blog,
+  .reviews,
+  .contact-us {
+    padding: 8rem 1.5rem;
+    .card-container{
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+  }
+
+  .brands {
+    .container {
+      max-width: 28rem;
+      row-gap: 2rem;
+    }
+  }
+  .work {
+    .swiper{
+      margin-top: 3rem;
+      display: block;
+      &-wrapper {
+        margin-bottom: 3.5rem;
+      }
+    }
+    .card-container:not(.card-container.our-work){
+      display: none;
+    }
+  }
+  .rewards,
+  .approach,
+  .brands{
+    padding: 8rem 1.5rem;
+  }
+
+  .rewards .progress,
+  .reviews .swiper,
+  .capabilities .btn,
+  .work .paragraph + .btn{
+    margin-top: 3rem;
+  }
+
+  .work{
+    .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal{
+      left: 0;
+      width: 100%;
+      height: 1px;
+      bottom: 0.4rem;
+      background: #c6c6c6;
+      margin-top: 3rem;
+    }
+    .swiper-scrollbar .swiper-scrollbar-drag{
+      top: -0.3rem;
+    }
+  }
+
+  .blog .card-container{
+    gap: 4rem;
+    margin-top: 4rem;
+    justify-content: center;
+  }
+
+}
+//
+//@media(min-width: 601px) and (max-width: 700px){
+//  section, .brands, footer{
+//    width: 100% !important;
+//  }
+//}

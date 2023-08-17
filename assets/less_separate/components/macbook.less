@@ -1,0 +1,184 @@
+@import (reference) "../base/variables";
+@import (reference) "../base/fonts";
+
+@import (reference) "../base/animations";
+@import (reference) "../base/base";
+@import (reference) "../base/typography";
+
+.top-block{
+  .macbook{
+    position: absolute;
+    background: url(../../img/mac.webp) no-repeat center center/cover;
+    left: -7.4rem;
+    top: calc((100% + 8rem) / 2);
+    transform: translateY(-50%);
+    height: 57.7rem;
+    width: 94.5rem;
+    padding: 3.4rem 8.7rem 6.1rem;
+  }
+  .mac-shadow{
+    position: absolute;
+    mix-blend-mode: multiply;
+    width: 129rem;
+    //height: auto;
+    left: -13.9rem;
+    //bottom: calc(0px - ((100% + .9rem) - 100%));
+    bottom: -11.5rem;
+    height: 77.7rem;
+
+    @media(min-width: 1800px) and (max-width: 1920px){
+      bottom: -19rem;
+    }
+
+    img{
+      width: 100%;
+      aspect-ratio: auto;
+      height: 100%;
+    }
+    @media(min-width: 1501px) and (max-height: 860px){
+      bottom: auto;
+      top: calc(100% / 3.5);
+    }
+  }
+  &-title{
+    position: absolute;
+    max-width: 66rem;
+    top: 55%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+  }
+  &>img{
+    max-height: 57.7rem;
+  }
+  .screen{
+    overflow: auto;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    &::-webkit-scrollbar {
+      width: .4rem;
+    }
+    &::-webkit-scrollbar-thumb &:hover {
+      background: #888;
+    }
+
+    img{
+      width: 100%;
+    }
+  }
+  h2{
+    font-weight: 700;
+    line-height: 10rem;
+    font-size: 8rem;
+    text-align: right;
+    letter-spacing: 0.03em;
+    text-shadow: 0 .4rem 2rem rgba(159, 131, 214, 0.15);
+  }
+  p {
+    align-self: flex-end;
+    margin-top: 3rem;
+    text-align: right;
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+    text-transform: uppercase;
+    color: @color-text-grey;
+    width: fit-content;
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      left: -4rem;
+      top:50%;
+      padding: .1rem 1.3rem;
+      background: @color-text-grey;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .top-block {
+    .macbook{
+      margin-top: 6.3rem;
+      position: relative;
+      left: initial;
+      top: initial;
+      transform: initial;
+      width: 74rem;
+      height: 45.2rem;
+      padding: 2.6rem 6.5rem 4.8rem;
+    }
+    .mac-shadow{
+      bottom: -30%;
+      left: 50%;
+      transform: translateX(-33%);
+      mix-blend-mode: multiply;
+      width: 79.7rem;
+      height: 63.8rem;
+
+    }
+    &-title{
+      top: initial;
+      position: static;
+      transform: initial;
+      text-align: center;
+    }
+    h2{
+      text-align: center;
+    }
+    p{
+      align-self: center;
+      margin-top: 4.6rem;
+      &:before{
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: -1.6rem;
+        padding: .1rem 1.3rem;
+        background: @color-text-grey;
+      }
+    }
+  }
+}
+
+//@media (min-width: 768px) and (min-width: 1459px)  {
+//  .top-block {
+//    .mac-shadow{
+//      transform: translateX(-31.6%);
+//    }
+//  }
+//}
+
+
+@media (max-width: 767px) {
+  .top-block {
+    .macbook {
+      margin-top: 3rem;
+      position: static;
+      height: 20.6rem;
+      width: 33.8rem;
+      padding: 1.2rem 3rem 2.1rem;
+      z-index: 2;
+    }
+    .mac-shadow{
+      transform: translateX(-31.6%);
+      height: 27rem;
+      width: 34.8rem;
+      z-index: 1;
+      bottom: -21%;
+    }
+    h2{
+      width: calc(100vw - 3rem);
+      line-height: 4.4rem;
+      font-size: 3.5rem;
+    }
+    p {
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+    }
+  }
+}

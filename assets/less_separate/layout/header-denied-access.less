@@ -1,0 +1,110 @@
+//header{
+//  margin-top: -15px;
+//}
+
+nav {
+  width: 100%;
+  height: 8rem;
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  z-index: 100;
+  padding: 0 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  .container {
+    max-width: 132rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  h2{
+    font-family: "KTF Jermilov";
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: 3.7rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    column-gap: .9rem;
+    img{
+      height: 3rem;
+    }
+    span{
+      margin-top: .3rem;
+    }
+  }
+
+  .right-side{
+    display: flex;
+    align-items: center;
+    p{
+      font-weight: 700;
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+    .menu-open{
+      margin-left: 1.4rem;
+    }
+  }
+}
+
+@media(max-width: 1200px){
+  nav {
+    height: 7rem;
+  }
+}
+
+@media(max-width: 700px){
+  nav {
+    height: 5rem;
+    h2{
+      font-size: 1.6rem;
+      line-height: 2.3rem;
+      column-gap: .9rem;
+      img{
+        height: 2.1rem;
+      }
+      span{
+        margin-top: .3rem;
+      }
+    }
+    ul{
+      background: rgba(255, 255, 255, 0.9);
+      position: absolute;
+      top: 5rem;
+      left: 0;
+      right: 0;
+      padding: 3rem 1.5rem;
+      display: block;
+      opacity: 0;
+      transition: transform .4s cubic-bezier(0.59, 1.24, 0.58, 1);
+      transform: translateY(-100%);
+      visibility: hidden;
+    }
+
+    .right-side{
+      p{
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+      }
+    }
+
+    .btn{
+      width: 11rem;
+      height: 3.5rem;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      letter-spacing: 0.07em;
+      padding: .7rem .9rem .9rem 1rem;
+    }
+  }
+}

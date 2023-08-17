@@ -1,0 +1,159 @@
+.top-block .macbook {
+  position: absolute;
+  background: url(../../img/mac.webp) no-repeat center center / cover;
+  left: -7.4rem;
+  top: calc((100% + 8rem) / 2);
+  transform: translateY(-50%);
+  height: 57.7rem;
+  width: 94.5rem;
+  padding: 3.4rem 8.7rem 6.1rem;
+}
+.top-block .mac-shadow {
+  position: absolute;
+  mix-blend-mode: multiply;
+  width: 129rem;
+  left: -13.9rem;
+  bottom: -11.5rem;
+  height: 77.7rem;
+}
+@media (min-width: 1800px) and (max-width: 1920px) {
+  .top-block .mac-shadow {
+    bottom: -19rem;
+  }
+}
+.top-block .mac-shadow img {
+  width: 100%;
+  aspect-ratio: auto;
+  height: 100%;
+}
+@media (min-width: 1501px) and (max-height: 860px) {
+  .top-block .mac-shadow {
+    bottom: auto;
+    top: calc(100% / 3.5);
+  }
+}
+.top-block-title {
+  position: absolute;
+  max-width: 66rem;
+  top: 55%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+}
+.top-block > img {
+  max-height: 57.7rem;
+}
+.top-block .screen {
+  overflow: auto;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+}
+.top-block .screen::-webkit-scrollbar {
+  width: 0.4rem;
+}
+.top-block .screen::-webkit-scrollbar-thumb .top-block .screen:hover {
+  background: #888;
+}
+.top-block .screen img {
+  width: 100%;
+}
+.top-block h2 {
+  font-weight: 700;
+  line-height: 10rem;
+  font-size: 8rem;
+  text-align: right;
+  letter-spacing: 0.03em;
+  text-shadow: 0 0.4rem 2rem rgba(159, 131, 214, 0.15);
+}
+.top-block p {
+  align-self: flex-end;
+  margin-top: 3rem;
+  text-align: right;
+  font-weight: 400;
+  font-size: 2.6rem;
+  line-height: 3.2rem;
+  text-transform: uppercase;
+  color: #C6C6C6;
+  width: fit-content;
+  position: relative;
+}
+.top-block p:before {
+  content: '';
+  position: absolute;
+  left: -4rem;
+  top: 50%;
+  padding: 0.1rem 1.3rem;
+  background: #C6C6C6;
+}
+@media (max-width: 1200px) {
+  .top-block .macbook {
+    margin-top: 6.3rem;
+    position: relative;
+    left: initial;
+    top: initial;
+    transform: initial;
+    width: 74rem;
+    height: 45.2rem;
+    padding: 2.6rem 6.5rem 4.8rem;
+  }
+  .top-block .mac-shadow {
+    bottom: -30%;
+    left: 50%;
+    transform: translateX(-33%);
+    mix-blend-mode: multiply;
+    width: 79.7rem;
+    height: 63.8rem;
+  }
+  .top-block-title {
+    top: initial;
+    position: static;
+    transform: initial;
+    text-align: center;
+  }
+  .top-block h2 {
+    text-align: center;
+  }
+  .top-block p {
+    align-self: center;
+    margin-top: 4.6rem;
+  }
+  .top-block p:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -1.6rem;
+    padding: 0.1rem 1.3rem;
+    background: #C6C6C6;
+  }
+}
+@media (max-width: 767px) {
+  .top-block .macbook {
+    margin-top: 3rem;
+    position: static;
+    height: 20.6rem;
+    width: 33.8rem;
+    padding: 1.2rem 3rem 2.1rem;
+    z-index: 2;
+  }
+  .top-block .mac-shadow {
+    transform: translateX(-31.6%);
+    height: 27rem;
+    width: 34.8rem;
+    z-index: 1;
+    bottom: -21%;
+  }
+  .top-block h2 {
+    width: calc(100vw - 3rem);
+    line-height: 4.4rem;
+    font-size: 3.5rem;
+  }
+  .top-block p {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+}
+/*# sourceMappingURL=macbook.css.map */

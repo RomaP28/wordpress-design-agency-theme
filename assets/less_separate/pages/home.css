@@ -1,0 +1,239 @@
+.top-section {
+  width: 100%;
+  min-height: 90rem;
+  height: 100vh;
+  max-height: 98rem;
+  background-image: linear-gradient(90.84deg, rgba(159, 131, 214, 0.5) 19.94%, rgba(190, 149, 203, 0.5) 73.55%, rgba(174, 112, 176, 0.5) 107.91%);
+  overflow: hidden;
+  position: relative;
+}
+.work,
+.capabilities,
+.blog,
+.reviews,
+.contact-us {
+  overflow: hidden;
+  background: #ffffff;
+  padding: 15rem 1.5rem;
+}
+.work .container,
+.capabilities .container,
+.blog .container,
+.reviews .container,
+.contact-us .container {
+  max-width: 132rem;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.work .card-container,
+.capabilities .card-container,
+.blog .card-container,
+.reviews .card-container,
+.contact-us .card-container {
+  margin-top: 7.5rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.work .paragraph,
+.capabilities .paragraph,
+.blog .paragraph,
+.reviews .paragraph,
+.contact-us .paragraph {
+  margin: 7.5rem auto 0;
+}
+.work .swiper {
+  display: none;
+}
+.work .card-container {
+  row-gap: 7.5rem;
+  column-gap: 5rem;
+}
+.reviews .swiper,
+.capabilities .btn,
+.work .paragraph + .btn,
+.approach .row:first-of-type {
+  margin-top: 7.5rem;
+}
+.capabilities .card-container {
+  gap: 4rem;
+  justify-content: center;
+}
+.rewards,
+.approach,
+.brands {
+  overflow: hidden;
+  background: #F8F7F7;
+  padding: 15rem 1.5rem;
+}
+.rewards .container,
+.approach .container,
+.brands .container {
+  max-width: 115rem;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.rewards .paragraph,
+.approach .paragraph,
+.brands .paragraph {
+  margin: 7.5rem auto 0;
+}
+.blog {
+  background: #2C434B;
+}
+.blog .h-primary {
+  color: #ffffff;
+}
+.blog .card-container {
+  justify-content: space-between;
+  row-gap: 7.5rem;
+}
+.rewards .h-primary {
+  text-transform: uppercase;
+}
+.rewards .h-secondary {
+  letter-spacing: 0.07em;
+}
+.brands {
+  padding: 8rem 1.5rem;
+}
+.brands .container {
+  max-width: unset;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 5rem;
+}
+.contact-us .container {
+  max-width: 115rem;
+}
+@media (max-width: 1433px) {
+  .work .paragraph,
+  .capabilities .paragraph,
+  .reviews .paragraph,
+  .contact-us .paragraph,
+  .rewards .paragraph,
+  .approach .paragraph {
+    margin: 5rem auto 0;
+  }
+  .work .card-container,
+  .capabilities .card-container,
+  .reviews .card-container,
+  .contact-us .card-container {
+    margin-top: 5rem;
+  }
+  .reviews .swiper,
+  .capabilities .btn,
+  .work .paragraph + .btn,
+  .approach .row:first-of-type {
+    margin-top: 5rem;
+  }
+  .work .card-container {
+    row-gap: 5rem;
+    column-gap: 2.9rem;
+  }
+  .capabilities .card-container {
+    gap: 5rem;
+    margin: 7.5rem auto 0;
+  }
+  .blog .card-container {
+    margin: 7.5rem auto 0;
+  }
+  .brands .container {
+    max-width: 70rem;
+  }
+}
+@media (max-width: 820px) {
+  .top-section {
+    max-height: unset;
+  }
+  .capabilities .card-container {
+    max-width: 65rem;
+  }
+  .blog .card-container {
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 768px) {
+  .rewards .h-primary {
+    text-transform: unset;
+  }
+  .rewards .progress {
+    margin-top: 5rem;
+  }
+}
+@media (max-width: 700px) {
+  .work .paragraph,
+  .capabilities .paragraph,
+  .reviews .paragraph,
+  .contact-us .paragraph,
+  .rewards .paragraph,
+  .approach .paragraph {
+    margin: 3rem auto 0;
+  }
+  .top-section {
+    min-height: 65rem;
+  }
+  .work,
+  .capabilities,
+  .blog,
+  .reviews,
+  .contact-us {
+    padding: 8rem 1.5rem;
+  }
+  .work .card-container,
+  .capabilities .card-container,
+  .blog .card-container,
+  .reviews .card-container,
+  .contact-us .card-container {
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .brands .container {
+    max-width: 28rem;
+    row-gap: 2rem;
+  }
+  .work .swiper {
+    margin-top: 3rem;
+    display: block;
+  }
+  .work .swiper-wrapper {
+    margin-bottom: 3.5rem;
+  }
+  .work .card-container:not(.card-container.our-work) {
+    display: none;
+  }
+  .rewards,
+  .approach,
+  .brands {
+    padding: 8rem 1.5rem;
+  }
+  .rewards .progress,
+  .reviews .swiper,
+  .capabilities .btn,
+  .work .paragraph + .btn {
+    margin-top: 3rem;
+  }
+  .work .swiper-horizontal > .swiper-scrollbar,
+  .work .swiper-scrollbar.swiper-scrollbar-horizontal {
+    left: 0;
+    width: 100%;
+    height: 1px;
+    bottom: 0.4rem;
+    background: #c6c6c6;
+    margin-top: 3rem;
+  }
+  .work .swiper-scrollbar .swiper-scrollbar-drag {
+    top: -0.3rem;
+  }
+  .blog .card-container {
+    gap: 4rem;
+    margin-top: 4rem;
+    justify-content: center;
+  }
+}
+/*# sourceMappingURL=home.css.map */

@@ -1,0 +1,160 @@
+@import (reference) "../base/variables";
+@import (reference) "../base/fonts";
+
+@import (reference) "../base/animations";
+@import (reference) "../base/base";
+@import (reference) "../base/typography";
+
+.article{
+  padding: 0 1.5rem;
+  article{
+    max-width: 115rem;
+    margin: 0 auto;
+    padding: 20rem 0 15rem;
+  }
+  .back{
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.07em;
+    color: @color-bg-dark;
+
+    img {
+      width: 1.75rem;
+      margin-right: 1rem;
+    }
+  }
+
+  picture{
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    display: block;
+  }
+
+  img{
+    width: 100%;
+  }
+  h1{
+    margin-top: 1rem;
+    text-align: left;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .row{
+    margin-top: 3rem;
+    display: flex;
+  }
+
+  .date{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: 0.05em;
+    color: @color-bg-dark;
+    white-space: nowrap;
+  }
+
+  .category{
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: 0.07em;
+    color: @color-black;
+    margin-left: 3rem;
+    white-space: nowrap;
+  }
+
+  span img{
+    display: block;
+    width: 45rem;
+    margin: 7.5rem auto;
+  }
+
+  .content{
+    & *:not(:last-child){
+      margin-bottom: 3rem;
+    }
+    margin-top: 7.5rem;
+
+    p, h2, li, figcaption{
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      letter-spacing: 0.07em;
+      color: @color-black;
+      font-weight: 200;
+    }
+    h2{
+      font-weight: 700;
+    }
+    h3{
+      font-size: 1.6rem;
+    }
+    p{
+      font-weight: 300;
+    }
+    //ul,
+    ol{
+      margin-left: 3.5rem;
+    }
+    &>ul>li {
+      list-style: disc;
+      margin-left: 3.5rem;
+    }
+
+    #toc_container{
+      display: none
+    }
+
+    //li{
+    //  list-style: initial;
+    //}
+
+     a{
+       color: @color-black;
+       text-decoration: underline;
+     }
+  }
+}
+
+@media(max-width: 820px) {
+  .article article{
+    padding: 15rem 0;
+
+    span img {
+      width: 35rem;
+      margin: 2rem auto;
+    }
+  }
+}
+
+@media(max-width: 700px) {
+  .article article{
+    padding: 8rem 0;
+
+    .date{
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+    }
+
+    .category{
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+    }
+    span img {
+      width: 30rem;
+      margin: 0 auto;
+    }
+    .content{
+      p, h2, li, figcaption{
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+      }
+      h3{
+        font-size: 1.3rem;
+      }
+      ol{
+        margin-left: 1.5rem;
+      }
+    }
+  }
+}

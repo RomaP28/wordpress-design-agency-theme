@@ -1,0 +1,59 @@
+@import (reference) "../base/variables";
+@import (reference) "../base/fonts";
+
+@import (reference) "../base/animations";
+@import (reference) "../base/base";
+@import (reference) "../base/typography";
+
+.composition{
+  position: relative;
+  width: 84rem;
+  height: 64.8rem;
+  img, video {
+    position: absolute;
+    border-radius: 1.1rem;
+    //filter: drop-shadow(0 0 2rem rgba(0, 0, 0, 0.15));
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
+    transition: all .3s;
+    overflow: hidden;
+  }
+  @media(min-width: 768px){
+    &:hover img:not(:hover),
+    &:hover video:not(:hover){
+      transform: scale(0.95);
+    }
+    img, video{
+      &:hover{
+        z-index: 2;
+        transform: scale(1.05)
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1300px) {
+  .composition{
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .composition{
+    width: 73.8rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .composition{
+    width: 100%;
+    height: fit-content;
+    img, video {
+      width: 100% !important;
+      position: static;
+      &:not(:last-child){
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}

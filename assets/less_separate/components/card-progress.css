@@ -1,0 +1,201 @@
+.progress {
+  margin-top: 7.5rem;
+}
+.progress .row {
+  display: flex;
+  justify-content: space-between;
+}
+.progress .row:last-child {
+  margin-top: 5rem;
+}
+.progress .card {
+  width: 30.45%;
+  cursor: pointer;
+}
+.progress .card,
+.progress .card-2 {
+  padding: 3.8rem 2.2rem;
+  background: #F8F7F7;
+  border: 0.1rem solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0.7rem 0.7rem 0.7rem rgba(0, 0, 0, 0.05), -1rem -1rem 1rem rgba(255, 255, 255, 0.6);
+  border-radius: 2rem;
+  transition: all 0.2s;
+}
+.progress .card-2 {
+  width: 21.8%;
+}
+.progress .card:hover {
+  background: rgba(159, 131, 214, 0.05);
+}
+.progress .inner {
+  display: flex;
+}
+.progress .inner > img {
+  width: 7.3rem;
+  height: auto;
+  align-self: center;
+}
+.progress .info {
+  margin-left: 3rem;
+  text-align: left;
+}
+.progress .title {
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+}
+.progress .rating {
+  font-weight: 400;
+  margin-top: 0.6rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: 0.07em;
+}
+.progress .member,
+.progress .star {
+  margin-top: 0.8rem;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.07em;
+  color: #C6C6C6;
+}
+.progress .member {
+  font-weight: 400;
+}
+.progress .star {
+  position: relative;
+  font-weight: 700;
+  margin-left: 2.4rem;
+}
+.progress .star:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -2.4rem;
+  transform: translateY(-50%);
+  background: url('../../img/icons/star.webp') no-repeat center center / contain;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.progress .card-2 {
+  padding: 3rem 6rem;
+  text-align: center;
+}
+.progress .card-2 .top {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 15rem;
+}
+.progress .card-2 img {
+  margin-right: 1.2rem;
+  width: 3rem;
+  height: 3rem;
+}
+.progress .card-2 .results {
+  margin-top: 1rem;
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 6.2rem;
+  letter-spacing: 0.07em;
+  background: linear-gradient(90deg, #9E82D4 0%, #A283DD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.progress .card-2:nth-child(3) img,
+.progress .card-2:nth-child(4) img {
+  margin-left: 1.3rem;
+  height: 2rem;
+}
+@media (max-width: 1150px) {
+  .progress {
+    display: flex;
+    column-gap: unset;
+    padding: 0;
+    justify-content: space-between;
+    max-width: 63rem;
+    margin: 7.5rem auto 0;
+  }
+  .progress .row {
+    width: 35rem;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .progress .row:last-child {
+    margin-top: 0;
+    width: 25rem;
+    gap: 4rem;
+  }
+  .progress .card,
+  .progress .card-2 {
+    width: 100%;
+  }
+  .progress .card-2 {
+    padding: 1.1rem 6rem;
+  }
+  .progress .card-2 .results {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 5rem;
+    letter-spacing: 0.07em;
+  }
+}
+@media (max-width: 700px) {
+  .progress {
+    display: block;
+  }
+  .progress .row {
+    width: 100%;
+  }
+  .progress .card {
+    padding: 2rem 1.5rem;
+  }
+  .progress .inner {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+  .progress .title {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+  .progress .rating {
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+  .progress .member,
+  .progress .star {
+    margin-top: 0.5rem;
+  }
+  .progress .row {
+    gap: 2rem;
+  }
+  .progress .row:last-child {
+    margin-top: 2rem;
+    width: 100%;
+    gap: 2rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .progress .card-2 {
+    width: 46.4%;
+    padding: 1.8rem 0.6rem;
+    text-align: center;
+  }
+  .progress .card-2 .top {
+    max-width: 12rem;
+  }
+  .progress .card-2 img.bricks {
+    margin-left: 0.5rem;
+    margin-right: 0.3rem;
+  }
+  .progress .card-2 .results {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 3.8rem;
+    letter-spacing: 0.07em;
+  }
+}
+/*# sourceMappingURL=card-progress.css.map */

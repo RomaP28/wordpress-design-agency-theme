@@ -1,0 +1,339 @@
+@import (reference) "../base/variables";
+@import (reference) "../base/fonts";
+
+@import (reference) "../base/animations";
+@import (reference) "../base/base";
+@import (reference) "../base/typography";
+
+
+.top-section {
+  .front-block {
+    position: absolute;
+    z-index: 2;
+    top: calc((100% + 8rem) / 2);
+    left: 50%;
+    width: calc(100vw - 3rem);
+    max-width: 132rem;
+    transform: translate(-50%, -50%);
+    border-radius: 5rem;
+    padding: 10.06rem 8.4rem;
+    //background: rgba(255, 255, 255, .92);
+
+    //@supports( -webkit-backdrop-filter: blur(20px)){      блюр только в сафари
+      background: rgba(255, 255, 255, .7);
+      -webkit-backdrop-filter: blur(20px);
+
+    //}
+
+    //@media(max-width: 768px){                             блюр для всех мобильных
+    //  background: rgba(255, 255, 255, .7);
+    //  -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+    //}
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 7rem;
+    line-height: 8.8rem;
+    text-align: center;
+    letter-spacing: 0.02em;
+    overflow: hidden;
+
+    .cursor {
+      display: inline-block;
+      height: 5.1rem;
+      background-color: @color-text-dark-grey;
+      width: 2px;
+      margin-right: 1.1rem;
+      @media (max-width: 1400px){
+        height: 4rem;
+      }
+      @media (max-width: 700px){
+        height: 2.2rem;
+      }
+    }
+  }
+
+  .mobile{
+    display: none;
+  }
+
+  .options {
+    margin-top: 5rem;
+    display: flex;
+    height: 16.2rem;
+    justify-content: space-between;
+    column-gap: 5rem;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      a {
+        width: fit-content;
+      }
+    }
+
+      h2{
+        font-weight: 700;
+        line-height: 2.2rem;
+        font-size: @default-font-size;
+        letter-spacing: 0.03em;
+        a {
+          &:link,
+          &:visited {
+            text-decoration: none;
+            color: @color-black;
+          }
+        }
+      }
+
+      p {
+        vertical-align: center;
+        font-weight: 300;
+        line-height: 2rem;
+        font-size: @small-font-size;
+        letter-spacing: 0.03em;
+      }
+    }
+
+  .swiper{
+    display: none;
+  }
+
+  .bottom {
+    display: flex;
+    column-gap: 3rem;
+    width: fit-content;
+    margin: 5rem auto 0;
+  }
+}
+
+@media(max-width: 1400px){
+  .top-section {
+    .title {
+      font-size: 5.2rem;
+      line-height: 5.6rem;
+      letter-spacing: unset;
+    }
+  }
+}
+
+@media(max-width: 1200px){
+  .top-section {
+    .front-block {
+      top: calc((100% + 7rem) / 2);
+      padding: 4.3rem 5.5rem;
+      overflow: hidden;
+    }
+    .title {
+      //font-size: 4.5rem;
+      line-height: 5.6rem;
+      .cursor {
+        font-size: 5rem;
+      }
+    }
+    .options {
+      h2{
+        font-weight: 700;
+        line-height: 2rem;
+        font-size: @small-font-size;
+        letter-spacing: 0.03em;
+      }
+
+      p {
+        vertical-align: center;
+        font-weight: 300;
+        line-height: 1.8rem;
+        font-size: 1.4rem;
+        letter-spacing: 0.03em;
+      }
+    }
+  }
+}
+
+@media(max-width: 820px) {
+  .top-section {
+    .front-block {
+      .desktop{
+        display: none;
+      }
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .top-section {
+    .front-block {
+      padding: 4.3rem 0;
+    }
+    .title {
+      font-size: 4.5rem;
+      max-width: 63rem;
+      margin: 0 auto;
+    }
+    .options {
+      display: none;
+    }
+    .swiper{
+      display: block;
+      margin-top: 5rem;
+      margin-left: 5.4rem;
+      //column-gap: 5rem;
+
+      &-wrapper {
+        margin-bottom: 3rem;
+      }
+
+      &-slide {
+        //margin-bottom: 3.2rem;
+        //width: 28rem;
+        height: 16rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        opacity: .5;
+
+        width: calc(100vw / 2.607); //for preload
+        margin-right: 3rem;
+
+        &:first-child{ // for preload
+          opacity: 1;
+        }
+
+        &.swiper-slide-active{
+          opacity: 1;
+        }
+      }
+
+      h2{
+        font-weight: 700;
+        line-height: 2rem;
+        font-size: @small-font-size;
+        letter-spacing: 0.03em;
+        a {
+            width: fit-content;
+          &:link,
+          &:visited {
+            text-decoration: none;
+            color: @color-black;
+          }
+        }
+      }
+      p {
+        vertical-align: center;
+        font-weight: 300;
+        line-height: 1.8rem;
+        font-size: 1.4rem;
+        letter-spacing: 0.03em;
+      }
+
+      .swiper-horizontal>.swiper-scrollbar,
+      .swiper-scrollbar.swiper-scrollbar-horizontal {
+          width: 94.5%;
+          left: 0;
+          height: 1px;
+          bottom: 0.4rem;
+          background: #c6c6c6;
+      }
+      .swiper-scrollbar .swiper-scrollbar-drag{
+        top: -3px;
+      }
+    }
+
+    .swiper-scrollbar{ //preload
+      width: 94.5%;
+      left: 0;
+      height: 1px;
+      bottom: 0.5rem;
+      background: #c6c6c6;
+      position: relative;
+      &:before{
+        position: absolute;
+        content: '';
+        background: #F34B4B;
+        height: 8px;
+        border-radius: 10px;
+        width: calc(100vw / 1.64);
+        top: -3px;
+      }
+
+      &.remove{
+        &:before{
+          content: none;
+        }
+      }
+    }
+  }
+
+}
+
+@media(max-width: 700px) {
+  .top-section {
+    .front-block {
+      top: 8rem;
+      transform: translate(-50%,0);
+      //top: calc((100% + 5rem) / 2);
+    }
+    .title {
+      max-width: 47rem;
+      margin: 0 auto;
+      font-size: 2.6rem;
+      line-height: 3.2rem;
+      letter-spacing: 0.03em;
+      .cursor {
+        font-size: 2.6rem;
+      }
+    }
+    .swiper {
+      margin-top: 3rem;
+      margin-left: 1.5rem;
+
+      &-wrapper {
+        margin-bottom: 1.5rem;
+      }
+
+      &-slide {
+        display: block;
+        width: calc(100vw / 1.729);
+        margin-right: 10px;
+
+        &:first-child{ // for preload
+          opacity: 1;
+        }
+        h2, p{
+          margin-bottom: 1rem;
+        }
+        margin-bottom: 3rem;
+      }
+
+      &-scrollbar { //preload
+        &:before {
+          width: calc(100vw / 2.44);
+        }
+      }
+    }
+    .bottom {
+      margin-top: 2.9rem;
+      column-gap: 1rem;
+      &.remove{
+        margin-top: 3rem;
+      }
+
+    }
+  }
+}
+
+@media(max-width: 500px) {
+  .top-section {
+    .title{
+      max-width: 26rem;
+    }
+    .front-block {
+      .mobile {
+        display: initial;
+      }
+    }
+  }
+}
